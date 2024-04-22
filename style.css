@@ -1,0 +1,127 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.39;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  background-color: #131313;
+}
+
+.slider {
+  margin: 110px auto 0;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: minmax(350px, 440px) minmax(400px, 680px);
+  gap: 50px;
+}
+
+.slider__info {
+  padding-top: 70px;
+}
+
+.tittle,
+.parameters__tittle,
+.slider__image-title {
+  margin: 0;
+  font-family: 'Yeseva One', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(227, 184, 115);
+}
+
+.tittle {
+  margin-bottom: 33px;
+  font-size: 27px;
+  letter-spacing: -0.07em;
+}
+
+.performance {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgb(255, 255, 255);
+}
+
+.parameters {
+  margin: 0;
+  margin-top: 42px;
+  margin-bottom: 80px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(150px, 160px) auto;
+  gap: 34px;
+}
+
+.parameters__item {
+  font-size: 13px;
+  line-height: 1.637;
+}
+
+.parameters__tittle {
+  margin-bottom: 9px;
+  font-size: 18px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.slider-controls__arrow {
+  width: 42px;
+  height: 14px;
+  background-image: url(./assets/arrow.svg);
+  background-position: center center;
+  cursor: pointer;
+}
+.arrow-right {
+  transform: rotate(180deg);
+}
+
+.slider-controls__dots {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.slider-controls__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background 0.4s ease;
+}
+
+.slider-controls__dot.active {
+  background-color: rgb(255, 255, 255);
+}
+
+.slider__titles {
+  display: flex;
+  gap: 60px;
+}
+
+.slider__image-title {
+  color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+
+.slider__image-title.active {
+  color: rgb(227, 184, 115);
+  border-bottom: 1px solid rgb(227, 184, 115);
+}
+
+.slider__image {
+  margin-top: 45px;
+  width: 100%;
+  height: 482px;
+  background-image: url('./assets/Rostov Admiral.png');
+  background-size: cover;
+  background-position: center center;
+}
