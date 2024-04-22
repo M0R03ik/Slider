@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Slider</title>
   </head>
   <body>
@@ -12,34 +19,37 @@
           <h1 class="tittle">Completed projects</h1>
           <p class="performance">
             Only a small part of the work performed by our company is presented
-            on the site. For 14 years on in the construction market we have made
-            happy more than 1000 families
+            on the site. For 14 years on in the construction<br />
+            market we have made happy more than 1000 families
           </p>
           <ul class="parameters">
             <li class="parametrs__item">
-              <span>City:</span>
+              <h2 class="parameters__tittle">City:</h2>
               Rostov-on-Don LCD admiral
             </li>
             <li class="parametrs__item">
-              <span>apartment area:</span>
+              <h2 class="parameters__tittle">apartment area:</h2>
               81 m<sup>2</sup>
             </li>
             <li class="parametrs__item">
-              <span>Repair time:</span>
+              <h2 class="parameters__tittle">Repair time:</h2>
               3.5 months
             </li>
             <li class="parametrs__item">
-              <span>Repair Cost:</span>
+              <h2 class="parameters__tittle">Repair Cost:</h2>
               Upon request
             </li>
           </ul>
           <div class="slider-controls">
-            <div class="slider-controls__arrow-left"></div>
+            <div class="slider-controls__arrow arrow-left"></div>
             <div class="slider-controls__dots"></div>
-            <div class="slider-controls__arrow-right"></div>
+            <div class="slider-controls__arrow arrow-right"></div>
           </div>
         </div>
         <div class="slider__content">
+          <div class="slider__titles">
+            <div class="slider__image-title active">Rostov-on-Don, Admiral</div>
+          </div>
           <div class="slider__image"></div>
         </div>
       </section>
