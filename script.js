@@ -33,23 +33,33 @@ function initSlider() {
   let currentImage = 0
   let newImage = currentImage
 
-  images.forEach(image => {
-    const title = document.createElement('div')
-    title.classList.add('slider__image-title')
-    title.textContent = image.title
-    sliderTitles.appendChild(title)
-  })
-
   initArrows()
   initDots()
+  initTitles()
   showImage(newImage)
-  showParameters(newImage)
 
   function initDots() {
-    images.forEach(image => {
+    images.forEach((image, index) => {
       const dot = document.createElement('div')
       dot.classList.add('slider-controls__dot')
       dots.appendChild(dot)
+      dot.addEventListener('click', () => {
+        showImage(index)
+        currentImage = index
+      })
+    })
+  }
+
+  function initTitles() {
+    images.forEach((image, index) => {
+      const title = document.createElement('div')
+      title.classList.add('slider__image-title')
+      title.textContent = image.title
+      sliderTitles.appendChild(title)
+      title.addEventListener('click', () => {
+        showImage(index)
+        currentImage = index
+      })
     })
   }
 
@@ -75,6 +85,7 @@ function initSlider() {
   }
 
   function showImage(index) {
+    showParameters(index)
     sliderImage.style.backgroundImage = `url(${images[index].url})`
     sliderTitles.childNodes[currentImage].classList.remove('active')
     sliderTitles.childNodes[index].classList.add('active')
@@ -93,7 +104,6 @@ function initSlider() {
           newImage = currentImage === images.length - 1 ? 0 : currentImage + 1
         }
         showImage(newImage)
-        showParameters(newImage)
         currentImage = newImage
       })
     })
