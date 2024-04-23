@@ -18,10 +18,11 @@ body {
 
 .slider__info {
   padding-top: 70px;
+  position: relative;
 }
 
-.tittle,
-.parameters__tittle,
+.title,
+.parameters__title,
 .slider__image-title {
   margin: 0;
   font-family: 'Yeseva One', serif;
@@ -30,10 +31,19 @@ body {
   color: rgb(227, 184, 115);
 }
 
-.tittle {
+.title {
   margin-bottom: 33px;
   font-size: 27px;
   letter-spacing: -0.07em;
+}
+
+.title-line {
+  width: 92px;
+  height: 1px;
+  background-color: rgb(227, 184, 115);
+  position: absolute;
+  top: 125px;
+  left: 161px;
 }
 
 .performance {
@@ -61,7 +71,7 @@ body {
   line-height: 1.637;
 }
 
-.parameters__tittle {
+.parameters__title {
   margin-bottom: 9px;
   font-size: 18px;
 }
@@ -94,7 +104,8 @@ body {
   height: 9px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
-  transition: background 0.4s ease;
+  transition: background 1s ease;
+  cursor: pointer;
 }
 
 .slider-controls__dot.active {
@@ -121,7 +132,7 @@ body {
   margin-top: 45px;
   width: 100%;
   height: 482px;
-  background-image: url('./assets/Rostov Admiral.png');
   background-size: cover;
   background-position: center center;
+  transition: background 1s ease;
 }
