@@ -2,7 +2,8 @@ let images = [
   {
     url: './assets/RostovAdmiral.png',
     title: 'Rostov-on-Don, Admiral',
-    city: 'Rostov-on-Don LCD admiral',
+    city: 'Rostov-on-Don',
+    apartments: 'LCD admiral',
     area: '81',
     repairTime: '3.5 months',
     repairCost: 'Upon request',
@@ -10,7 +11,8 @@ let images = [
   {
     url: './assets/Sochi.png',
     title: 'Sochi Thieves',
-    city: 'Sochi Thieves',
+    city: 'Sochi',
+    apartments: 'Thieves',
     area: '105',
     repairTime: '4 months',
     repairCost: 'Upon request',
@@ -18,7 +20,8 @@ let images = [
   {
     url: './assets/RostovPatriotic.png',
     title: 'Rostov-on-Don Patriotic',
-    city: 'Rostov-on-Don Patriotic',
+    city: 'Rostov-on-Don',
+    apartments: 'Patriotic',
     area: '93',
     repairTime: '3 months',
     repairCost: 'Upon request',
@@ -65,19 +68,20 @@ function initSlider() {
 
   function showParameters(index) {
     let content = `<li class="parameters__item">
-    <h2 class="parameters__tittle">City:</h2>
-    ${images[index].city}
+    <h2 class="parameters__title">City:</h2>
+    ${images[index].city}<br>
+    ${images[index].apartments}
   </li>
   <li class="parameters__item">
-    <h2 class="parameters__tittle">apartment area:</h2>
+    <h2 class="parameters__title">apartment area:</h2>
     ${images[index].area} m<sup>2</sup>
   </li>
   <li class="parameters__item">
-    <h2 class="parameters__tittle">Repair time:</h2>
+    <h2 class="parameters__title">Repair time:</h2>
     ${images[index].repairTime}
   </li>
   <li class="parameters__item">
-    <h2 class="parameters__tittle">Repair Cost:</h2>
+    <h2 class="parameters__title">Repair Cost:</h2>
     ${images[index].repairCost}
   </li>`
 
